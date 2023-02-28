@@ -34,3 +34,4 @@ How to assign a word onto grid:
 - Could ask the user if they would like to reroll their choice of words
 - Create unit tests to test validity of the game
 - Use external library for better visuals for the final print/takes user to a webpage/exports a sheet to be printed off
+- Upload onto the Cloud, hosted on AWS EC2 for public accessibility
