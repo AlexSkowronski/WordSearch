@@ -11,7 +11,7 @@ if __name__ == "__main__":
     while not check_valid_entry_integer(NUMBER_OF_WORDS):
         NUMBER_OF_WORDS = input(f"Your input \"{NUMBER_OF_WORDS}\" is not an integer, please try again!")
     NUMBER_OF_WORDS = int(NUMBER_OF_WORDS)
-    
+
     BANK = pick_random_words(FULL_WORD_BANK, NUMBER_OF_WORDS)
     
     GRID_WIDTH = input("Please enter a width for the word-search grid as an integer:")
@@ -47,8 +47,6 @@ if __name__ == "__main__":
             chosen_direction = random.choice(valid_directions)
             populate_word(BANK[-1], chosen_direction, game, position)
             SAVED_BANK.append(BANK.pop())
-        # else:
-        #     print(f"Could not fit word: {BANK[-1]}, {attempt_limit - attempts} attempts remain")
         attempts += 1
     if not SAVED_BANK:
         print("I'm sorry, the chosen width and height could not fit the words, please restart and try again :(")
