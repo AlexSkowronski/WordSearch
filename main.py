@@ -11,6 +11,7 @@ if __name__ == "__main__":
     while not check_valid_entry_integer(NUMBER_OF_WORDS):
         NUMBER_OF_WORDS = input(f"Your input \"{NUMBER_OF_WORDS}\" is not an integer, please try again!")
     NUMBER_OF_WORDS = int(NUMBER_OF_WORDS)
+    
     BANK = pick_random_words(FULL_WORD_BANK, NUMBER_OF_WORDS)
     
     GRID_WIDTH = input("Please enter a width for the word-search grid as an integer:")
