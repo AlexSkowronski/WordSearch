@@ -11,6 +11,7 @@ if __name__ == "__main__":
     while not check_valid_entry_integer(NUMBER_OF_WORDS):
         NUMBER_OF_WORDS = input(f"Your input \"{NUMBER_OF_WORDS}\" is not an integer, please try again!")
     NUMBER_OF_WORDS = int(NUMBER_OF_WORDS)
+    
     BANK = pick_random_words(FULL_WORD_BANK, NUMBER_OF_WORDS)
     
     GRID_WIDTH = input("Please enter a width for the word-search grid as an integer:")
@@ -26,6 +27,7 @@ if __name__ == "__main__":
     """3. Initialise grid and copy of bank of words to find"""
     game = create_empty_grid(GRID_WIDTH, GRID_HEIGHT)
     SAVED_BANK = []
+
     """4. Loop over bank of words till empty"""
     attempts = 0
     attempt_limit = 100
@@ -38,8 +40,6 @@ if __name__ == "__main__":
 
         """4c. Check to see if current word selected can fit in any of these directions"""
         valid_directions = fit_word_check(BANK[-1], squares_usable)
-
-        number_of_attempts = 0
 
         """4d. Checks if list of valid direction is non-empty, chooses random direction, pushes word into word-search grid, removes word from current queue, appends removed word to saved bank, repeats.
         If no directions are available, repeats from 4a to find a new square and so on"""
